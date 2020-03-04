@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Intern Secu</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/intern.png"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<!--===============================================================================================-->
+
+</head>
+<body>
+
+	<div class="bg-contact100" style="background-image: url('images/secu.jpg'); background-position: top;">
+		<div class="container-contact100">
+			<div class="wrap-contact100">
+				<div class="contact100-pic js-tilt animated infinite bounce">
+					<img src="images/seculogo.png" alt="IMG">
+
+				</div>			
+				
+				<form class="contact100-form validate-form">
+					<span class="contact100-form-title">
+						Tell me what you do, <span style="color: #3a5ae9;"> sicaas </span>
+					</span>
+					
+					<div class="wrap-input100 validate-input" data-validate = "Message is required">
+						<textarea class="input100" id="message" placeholder="..."></textarea>
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="container-contact100-form-btn">
+						<button type="button" id="submit" class="contact100-form-btn">
+							Submit
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+	<script>
+		 $('#submit').click(function(){
+			 var message = $('#message').val();
+
+			 if(message == ''){
+			 	Swal.fire({
+				icon: 'error',
+				title: 'Noo...',
+				text: 'You must tell me!',
+				footer: '<a>Whats wrong with you</a>'
+				})
+			}else{
+				Swal.fire({
+				icon: 'success',
+				title: 'Okay',
+				text: 'Keep spirit!',
+				footer: '<a>Never stop learning</a>'
+				})
+			}
+		 })
+	</script>
+</body>
+</html>
